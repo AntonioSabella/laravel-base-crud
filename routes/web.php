@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/* 
+model: Comic
+migration: comics
+controller resources ComicController
+seeder ComicSeeder
+
+- title
+- description
+- thumb
+- price
+- series
+- sale_date
+- type
+
+
+*/
