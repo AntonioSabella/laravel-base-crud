@@ -1,2 +1,31 @@
 //
 @use 'bootstrap';
+
+/* Commons */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+table {
+    background-color: antiquewhite;
+    th {
+     color: coral;
+    }
+}
+
+/* Utilities */
+
+.w_10 {
+    width: 10%;
+}
+
+.w_15 {
+    width: 15%;
+}
