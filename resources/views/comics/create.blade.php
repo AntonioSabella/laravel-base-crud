@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container my-4">
-<form action="{{route('comics.store')" method="post">
+<form action="{{route('comics.store')}}" method="post">
     @csrf 
 
    <div class="form-group d-flex">

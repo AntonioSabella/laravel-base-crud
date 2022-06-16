@@ -28,12 +28,12 @@
             <td>{{$comic->id}}</td>
             <td><strong>{{$comic->title}}</strong> </td>
             <td>{{$comic->description}}</td>
-            <td><a href="{{route('comics.show', $comic)}}"><img src="{{$comic->thumb}}" alt=""></a> </td>
+            <td><a href="{{route('comics.show', $comic)}}"><img width='200' src="{{$comic->thumb}}" alt=""></a> </td>
             <td>{{$comic->price}}€</td>
             <td>{{$comic->series}}</td>
             <td class='w_10'>{{$comic->sale_date}}</td>
             <td class='w_10'>{{$comic->type}}</td>
-            <td class='w_15'>View - Edit - Delete</td>
+            <td class='w_15'><a href="{{route('comics.show', $comic)}}">View</a> - Edit - Delete</td>
         </tr>
         @endforeach
     </tbody>
