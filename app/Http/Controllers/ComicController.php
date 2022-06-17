@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Comic;
 use Illuminate\Http\Request;
 
+
 class ComicController extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = Comic::all();
+        $comics = Comic::orderByDesc('id')->get();
         return view('comics.index', compact('comics'));
     }
 
@@ -36,14 +37,34 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+       //Visualizzazione della richiesta
        //dd($request->all());
 
-       $comic = new Comic();
+       // Validare i dati inseriti dall'utente
+        $validated_data = $request->validate([
+            'title' => 'required|max:100',
+            'thumb' => 'required',
+            'price' => 'nullable',
+            'series' => 'nullable',
+            'description' => 'nullable'
+        ]);
+
+         //dd($validated_data);
+
+        // Salvare i dati nel database
+        Comic::create($validated_data);
+
+       
+       /* Alterativa estesa per l'inserimento di dati nel database
+        $comic = new Comic();
        $comic->title = $request->title;
        $comic->thumb = $request->thumb;
+       $comic->price = $request->price;
+       $comic->series = $request->series;
        $comic->description = $request->description;
        $comic->save();
-
+       */
+      
        return redirect()->route('comics.index');
 
 

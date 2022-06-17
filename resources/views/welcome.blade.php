@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1> Ecco la pagina iniziale</h1>
+<h1 class='text-center'> Ecco la pagina iniziale</h1>
 
 @endsection
