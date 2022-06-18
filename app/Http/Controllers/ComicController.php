@@ -90,7 +90,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -102,7 +102,21 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        //dd($request->all());
+        //$data = $request->all();
+
+        // Metodo per passare i dati validati anche per le modifiche
+        $validated_data = $request->validate([
+            'title' => 'required|max:100',
+            'thumb' => 'required',
+            'price' => 'nullable',
+            'series' => 'nullable',
+            'description' => 'nullable'
+        ]);
+
+        $comic->update($validated_data);
+
+        return redirect()->route('comics.index');
     }
 
     /**
@@ -113,6 +127,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }
