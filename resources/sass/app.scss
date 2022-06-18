@@ -9,12 +9,20 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+img {
+    max-height: 100%;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
 }
 
 table {
-    background-color: antiquewhite;
+    background-color: lightgrey;
     th {
      color: coral;
     }
@@ -22,10 +30,114 @@ table {
 
 /* Utilities */
 
+.fixed_height {
+    height: 60px;
+}
+
+.fixed_height_small {
+    height: 30px;
+}
+
 .w_10 {
     width: 10%;
 }
 
 .w_15 {
     width: 15%;
+}
+
+
+/* Header */
+
+header{
+    background-color: cornflowerblue;
+    height: 100px;
+    a {
+        text-decoration: none;
+        span {
+            color: white;
+            padding: 0.5rem 0.8rem;
+            transition: 600ms;
+        }
+        &:hover span{
+            color: cornflowerblue;
+            background-color: white;
+        }
+    }
+}
+
+
+/* Main */
+main {
+    background-color: bisque;
+    img {
+        height: 200px;
+        aspect-ratio: 1 / 1.2;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .table {
+        margin: 0;
+        th {
+            background-color: gray;
+        }
+        tr {
+            &:hover {
+                background-color: white;
+            }
+        }
+
+    }
+
+   .card {
+    transition: 600ms;
+
+    h5 {
+        font-weight: bold;
+    }
+    
+    
+    .comic_description {
+        height: 120px;
+        overflow-y: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+
+    .card-body {
+        display: none;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.7);
+        font-weight: 600;
+        font-size: 13px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        color: white;
+        transition: 600ms;
+        small {
+            background-color: palegreen;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.8rem;
+            color: black;
+        }
+    }
+
+    &:hover .card-body {
+        display:block;
+        position: absolute;
+        bottom: 0;
+        transition: 600ms;
+    }
+
+   }
+}
+
+/* Footer */
+
+footer{
+    background-color: palegreen;
+    height: 150px;
 }

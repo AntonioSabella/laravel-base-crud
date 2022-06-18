@@ -10235,22 +10235,121 @@ textarea.form-control-lg {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  max-height: 100%;
+}
+
 body {
   font-family: "Nunito", sans-serif;
 }
 
 table {
-  background-color: antiquewhite;
+  background-color: lightgrey;
 }
 table th {
   color: coral;
 }
 
 /* Utilities */
+.fixed_height {
+  height: 60px;
+}
+
+.fixed_height_small {
+  height: 30px;
+}
+
 .w_10 {
   width: 10%;
 }
 
 .w_15 {
   width: 15%;
+}
+
+/* Header */
+header {
+  background-color: cornflowerblue;
+  height: 100px;
+}
+header a {
+  text-decoration: none;
+}
+header a span {
+  color: white;
+  padding: 0.5rem 0.8rem;
+  transition: 600ms;
+}
+header a:hover span {
+  color: cornflowerblue;
+  background-color: white;
+}
+
+/* Main */
+main {
+  background-color: bisque;
+}
+main img {
+  height: 200px;
+  aspect-ratio: 1/1.2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+main .table {
+  margin: 0;
+}
+main .table th {
+  background-color: gray;
+}
+main .table tr:hover {
+  background-color: white;
+}
+main .card {
+  transition: 600ms;
+}
+main .card h5 {
+  font-weight: bold;
+}
+main .card .comic_description {
+  height: 120px;
+  overflow-y: auto;
+}
+main .card .comic_description::-webkit-scrollbar {
+  display: none;
+}
+main .card .card-body {
+  display: none;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  color: white;
+  transition: 600ms;
+}
+main .card .card-body small {
+  background-color: palegreen;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  color: black;
+}
+main .card:hover .card-body {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: 600ms;
+}
+
+/* Footer */
+footer {
+  background-color: palegreen;
+  height: 150px;
 }

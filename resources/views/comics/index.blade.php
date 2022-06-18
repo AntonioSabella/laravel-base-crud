@@ -6,7 +6,7 @@
 <h1 class='p-5 text-center'>Comics</h1>
 
 <div class="container">
-    <div class="add_button d-flex justify-content-end">
+    <div class="add_button d-flex justify-content-end py-2">
       <a class='btn btn-primary' href="{{route('comics.create')}}">Add New Comic</a>
     </div>    
 
@@ -28,11 +28,11 @@
     <tbody>
         @foreach($comics as $comic)
         <tr>
-            <td>{{$comic->id}}</td>
+            <td>{{$comic->id}}.</td>
             <td><strong>{{$comic->title}}</strong> </td>
             <td>{{$comic->description}}</td>
             <td><a href="{{route('comics.show', $comic)}}"><img class='rounded' width='150' src="{{$comic->thumb}}" alt=""></a> </td>
-            <td>{{$comic->price}}€</td>
+            <td><strong>{{$comic->price}}€</strong></td>
             <td>{{$comic->series}}</td>
             <td class='w_10'>{{$comic->sale_date}}</td>
             <td class='w_10'>{{$comic->type}}</td>
