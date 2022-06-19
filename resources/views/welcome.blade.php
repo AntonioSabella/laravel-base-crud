@@ -4,7 +4,7 @@
 
 <h1 class='text-center'> Ecco la pagina iniziale</h1>
 
-<div class="container w-75 py-5">
+<div class="container bg-dark w-75 p-5">
     <div class="row row-cols-4 gy-4">
         @forelse($comics as $comic)
         <div class="col">

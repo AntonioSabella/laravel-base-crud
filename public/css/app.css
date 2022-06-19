@@ -10293,14 +10293,6 @@ header a:hover span {
 main {
   background-color: bisque;
 }
-main img {
-  height: 200px;
-  aspect-ratio: 1/1.2;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-}
 main .table {
   margin: 0;
 }
@@ -10313,11 +10305,19 @@ main .table tr:hover {
 main .card {
   transition: 600ms;
 }
+main .card img {
+  height: 260px;
+  aspect-ratio: 1/1.2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
 main .card h5 {
   font-weight: bold;
 }
 main .card .comic_description {
-  height: 120px;
+  height: 100px;
   overflow-y: auto;
 }
 main .card .comic_description::-webkit-scrollbar {
@@ -10340,6 +10340,14 @@ main .card .card-body small {
   border-radius: 0.5rem;
   padding: 0.5rem 0.8rem;
   color: black;
+  transition: 600ms;
+  border: 1px solid transparent;
+}
+main .card .card-body small:hover {
+  font-size: 16px;
+  color: red;
+  font-weight: 600;
+  border: 1px solid red;
 }
 main .card:hover .card-body {
   display: block;
